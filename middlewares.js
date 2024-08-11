@@ -15,7 +15,7 @@ const delayActionMiddlewares = (store) => (next) => (action) => {
 
 }
 
-const fetchTodosMiddleware = (store) => (next) => async (action) => {
+const fetchAsyncMiddleware = (store) => (next) => async (action) => {
 
    if (typeof action === "function") {
 
@@ -28,6 +28,6 @@ const fetchTodosMiddleware = (store) => (next) => async (action) => {
 
 module.exports = {
    delayActionMiddlewares,
-   fetchTodosMiddleware
+   fetchAsyncMiddleware
 }
 
